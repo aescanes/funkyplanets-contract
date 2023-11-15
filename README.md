@@ -1,40 +1,86 @@
-# Funky Planets ERC721 NFT contract
+# Funky Planets ERC721 NFT Contract
 
-At the time this NFT collection was created, NASA had 4525 exoplanets registered. This collection is the funky version of them. All planets were randomly and algorithmically generated with different traits like background, shape, rings, life, level of technological advancement, etc. Some planets will have satellites, water and even cities.
+Unlock the cosmos with the Funky Planets NFT collection, a whimsical take on the 4525 registered exoplanets identified by NASA. Each planet in this collection is a unique creation, algorithmically generated with distinct traits like background, shape, rings, life, and technological advancement. Some planets even come complete with satellites, water bodies, and bustling cities.
 
-You now can be the owner of your own planet with its information. Each planet also counts with the QR code to read its information.
+## Table of Contents
 
-## NFT contract (solidity)
+- [Dependencies](#dependencies)
+- [NFT Contract (Solidity)](#nft-contract-solidity)
+  - [Files](#files)
+- [NFT Contract Deployment Process](#nft-contract-deployment-process)
+  - [Migration Files](#migration-files)
+  - [Solidity Security and Style Guide Validations](#solidity-security-and-style-guide-validations)
+- [Test Contract](#test-contract)
+- [Deploy Using Truffle](#deploy-using-truffle)
+- [Scripts](#scripts)
 
-### Files (contracts)
+## Dependencies
+Make sure you have the following dependencies installed:
 
-* contracts/Migrations.sol
-* contracts/FunkyPlanets.sol
+* Node.js and npm: [Download and Install Node.js and npm](https://nodejs.org/)
+* Solhint: Install Solhint globally to lint your Solidity code.
 
-## NFT contract deploy process (javascript)
+```bash
+npm install -g solhint
+``````
+* Ganache: [Download and Install Ganache](https://trufflesuite.com/ganache/) for local blockchain development.
 
-### Files (migrations)
+## NFT ERC721 Contracts (Solidity)
 
-* migrations/1_initial_migration.js
-* migrations/2_smart_contract_migration.js
+### Files
 
-### Check Solidity Security and Style Guide validations (solhint)
-https://github.com/protofire/solhint
+- `contracts/Migrations.sol`
+- `contracts/FunkyPlanets.sol`
+
+Explore the solidity contracts that power the Funky Planets NFT collection.
+
+## NFT Contract Deployment Process
+
+### Migration Files
+
+Follow these migration scripts to deploy the Funky Planets NFT contract using JavaScript.
+
+- `migrations/1_initial_migration.js`
+- `migrations/2_smart_contract_migration.js`
+
+### Solidity Security and Style Guide Validations
+
+Make sure your contract adheres to best practices with [Solhint](https://github.com/protofire/solhint).
+
 ```bash
 solhint contracts/FunkyPlanets.sol
 ```
 
-## test contract
+### Test Contract
+Ensure the contract functionality with Truffle's testing suite.
 ```bash
 truffle test
 ```
 
-## Deploy using truffle
-
+### Deploy Using Truffle
+Initialize, compile, and migrate the contract to your desired network.
 ```bash
 truffle init
 
 truffle compile
 
 truffle migrate --network <network_name>
+```
+
+### Scripts
+Make your development process smoother with these npm script commands:
+
+* Compile Contracts:
+```bash
+npm run compile
+```
+
+* Migrate Contracts::
+```bash
+npm run migrate
+```
+
+* Deploy to Specific Network:
+```bash
+npm run deploy --network <network_name>
 ```
