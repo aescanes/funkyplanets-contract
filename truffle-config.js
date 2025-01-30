@@ -46,6 +46,10 @@ module.exports = {
      port: 7545,            // Standard Ethereum port (default: none)
      network_id: "*",       // Any network (default: none)
     },
+    sepolia: {
+      provider: new HDWalletProvider(mnemonic, "https://sepolia.infura.io/v3/{INFURA_KEY}", 2),
+      network_id: 11155111
+    },
     // Another network with more advanced options...
     // advanced: {
     // port: 8777,             // Custom port

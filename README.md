@@ -23,7 +23,15 @@ Make sure you have the following dependencies installed:
 ```bash
 npm install -g solhint
 ``````
+* truffle
+```bash
+npm install -g truffle
+```
 * Ganache: [Download and Install Ganache](https://trufflesuite.com/ganache/) for local blockchain development.
+* package dependancies
+```bash
+npm i
+```
 
 ## NFT ERC721 Contracts (Solidity)
 
