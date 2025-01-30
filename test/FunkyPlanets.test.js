@@ -197,7 +197,7 @@ contract('Funky Planets ERC721 token tests', async accounts => {
                 const result = await FunkyPlanetsInstance.tokenURI(1);
                 expect(result.receipt.status).to.equal(false);
             } catch (error) {
-                expect(error.toString()).to.equal('Error: Returned error: VM Exception while processing transaction: revert ERC721Metadata: URI query for nonexistent token');
+                expect(error.toString()).to.equal('Error: VM Exception while processing transaction: revert ERC721Metadata: URI query for nonexistent token');
             }
         });
 
